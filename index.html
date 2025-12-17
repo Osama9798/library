@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/4b0a837c7d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>My Library</title>
+  </head>
+  <body class="grid-container">
+    <header class="header">
+      <nav class="logo">
+        <i class="fa-solid fa-book book-logo"></i>
+        <h1>Osama's Library</h1>
+        <i class="fa-solid fa-magnifying-glass search-logo"></i>
+        <div class="search-bar"></div>
+        <div class="side-nav">
+          <i class="fa-solid fa-bell bell-logo"></i>
+          <i class="fa-solid fa-phone phone-logo"></i>
+          <button id="addBooks" class="add-button">Add Book</button>
+        </div>
+      </nav>
+      <img
+        src="Assets/29739.jpg"
+        alt="A large ai generated medival 3 tier library with a huge stack of books"
+        class="hero-image"
+      />
+    </header>
+    <div class="overlay" id="form">
+      <form id="addForm" class="form">
+        <label for="bookName">Enter Books name:</label>
+        <input id="bookName" name="bookName" type="text" required /><br />
+        <label for="Authname">Enter Authors name:</label>
+        <input id="Authname" name="Authname" type="text" required /><br />
+        <label for="pages">Enter pages:</label>
+        <input id="pages" name="pages" type="number" required /><br />
+        <label for="status">Enter status:</label>
+        <input id="status" name="status" type="text" required /><br />
+        <button id="submit" type="submit">Add</button>
+      </form>
+    </div>
+    <footer></footer>
+  </body>
+</html>
+<script src="script.js"></script>
