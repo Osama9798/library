@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>My Library</title>
   </head>
-  <body class="grid-container">
+  <body id="body" class="grid-container">
     <header class="header">
       <nav class="logo">
         <i class="fa-solid fa-book book-logo"></i>
@@ -33,8 +33,8 @@
       <form id="addForm" class="form">
         <label for="bookName">Enter Books name:</label>
         <input id="bookName" name="bookName" type="text" required /><br />
-        <label for="Authname">Enter Authors name:</label>
-        <input id="Authname" name="Authname" type="text" required /><br />
+        <label for="authName">Enter Authors name:</label>
+        <input id="authName" name="authName" type="text" required /><br />
         <label for="pages">Enter pages:</label>
         <input id="pages" name="pages" type="number" required /><br />
         <label for="status">Enter status:</label>
@@ -42,6 +42,7 @@
         <button id="submit" type="submit">Add</button>
       </form>
     </div>
+    <h2 class="book-heading">My Book Collection</h2>
     <footer></footer>
   </body>
 </html>
