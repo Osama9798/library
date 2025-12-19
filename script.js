@@ -1,4 +1,4 @@
-const myBooks = [];
+let myBooks = [];
 function Books(name, author, pages, status) {
   this.name = name;
   this.author = author;
@@ -9,12 +9,6 @@ function Books(name, author, pages, status) {
 function addBook(name, author, pages, status) {
   const book = new Books(name, author, pages, status);
   myBooks.push(book);
-  console.log(myBooks);
-  createCards(myBooks);
-  let remove = document.querySelector(".delete-button");
-  remove.addEventListener("click", (e) => {
-    console.log(e.target.parentElement);
-  });
 }
 
 function createCards(myBooks) {
@@ -64,4 +58,11 @@ newForm.addEventListener("submit", (event) => {
   addBook(bookName, author, page, bookStatus);
   document.querySelector("#addForm").reset();
   newForm.classList.remove("display");
+  createCards(myBooks);
+});
+cardContainer.addEventListener("click", (e) => {
+  if (e.target.classList.value == "delete-button") {
+    myBooks = myBooks.filter((value) => value.id != e.target.parentElement.id);
+    createCards(myBooks);
+  }
 });
